@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 id='title'>じゃんけんゲーム</h1>
+    </header>
+    <div class="happyo"><img src="img/youWin.jpg" alt="" height="530px" id='happyo'></div>
+    <main>
+        <div id='score'>
+            <h2>私のスコア</h2>
+            <p id='myScore'>0</p>
+        </div>
+        <div class="me">
+            <div id="click_here">クリック</div>
+            <div id="guu" class="start"><img src='img/rock.jpg' id="fluffy1"></div>
+            <div id="choki" class="start"><img src='img/scissors.jpg' id="fluffy2"></div>
+            <div id="paa" class="start"><img src='img/paper.jpg' id="fluffy3"></div>
+        </div>
+        <div class="resp">
+            <img src='img/rock.jpg' id='pcGuu' class='pcResp'>
+            <img src='img/scissors.jpg' id='pcChoki' class='pcResp'>
+            <img src='img/paper.jpg' id='pcPaa' class='pcResp'>
+        </div>
+        <div id='score'>
+            <h2>PCのスコア</h2>
+            <p id='pcScore'>0</p>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/code.js"></script>
+</body>
+
+</html>

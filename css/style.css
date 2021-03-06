@@ -1,0 +1,157 @@
+body {
+    font-family: "Reggae One", cursive;
+    background-color: #f0ffff;
+}
+
+header {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 8vw;
+    font-weight: 900;
+    color: darkblue;
+    text-shadow: 6px 6px floralwhite;
+    z-index: -1;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#score {
+    margin: 60px 100px;
+    font-size: 35px;
+    text-align: center;
+    color: darkblue;
+    text-shadow: 6px 6px floralwhite;
+    border: darkblue 2px solid;
+    border-radius: 5%;
+    height: max-content;
+    padding: 5px;
+    width: min-content;
+}
+
+#myScore {
+    font-size: 50px;
+}
+
+#pcScore {
+    font-size: 50px;
+}
+
+.me {
+    margin-left: 50px;
+    height: 420px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.start {
+    width: 100px;
+    height: 100px;
+}
+
+.resp {
+    margin-left: 50px;
+    height: 420px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.pcResp {
+    width: 100px;
+    height: 100px;
+    transform: scaleX(-1);
+    border-radius: 33px;
+}
+
+.happyo {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -37%);
+}
+
+
+/* 始めてアクセスした時のみ表示されます */
+
+#click_here {
+    position: fixed;
+    height: 420px;
+    width: 155px;
+    border: black 2px solid;
+    margin: -27px 0 0 -26px;
+    text-align: center;
+    font-size: 7vw;
+    z-index: 1;
+    color: dimgray;
+    display: none;
+}
+
+
+/* ボタンが少し動いた方が分かりやすい… */
+
+#fluffy1 {
+    height: 100px;
+    width: 100px;
+    animation: fluffy4 3s ease infinite;
+    border-radius: 33px;
+}
+
+#fluffy2 {
+    height: 100px;
+    width: 100px;
+    animation-delay: 0.5s;
+    animation: fluffy4 2.1s ease infinite;
+    border-radius: 33px;
+}
+
+#fluffy3 {
+    height: 100px;
+    width: 100px;
+    animation-delay: 1s;
+    animation: fluffy4 4.2s ease infinite;
+    border-radius: 33px;
+}
+
+@keyframes fluffy4 {
+    0% {
+        transform: translateY(0)
+    }
+    5% {
+        transform: translateY(0)
+    }
+    10% {
+        transform: translateY(0)
+    }
+    20% {
+        transform: translateY(-15px)
+    }
+    25% {
+        transform: translateY(0)
+    }
+    30% {
+        transform: translateY(-15px)
+    }
+    50% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}

@@ -1,0 +1,110 @@
+body {
+    background-color: goldenrod;
+    color: darkblue;
+    font-family: "Reggae One", cursive;
+    text-shadow: floralwhite 5px 5px;
+    text-align: center;
+    font-weight: 900;
+    height: 100%;
+}
+
+h1 {
+    font-size: 7vw;
+    z-index: 10;
+    margin-top: 80px;
+}
+
+h2 {
+    font-size: 5vw;
+    z-index: 10;
+    margin-top: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: orangered;
+}
+
+h3 {
+    width: 22vw;
+    font-size: 4vw;
+    margin: 180px auto 0;
+    position: relative;
+    z-index: 10;
+    border: orangered 2px solid;
+    padding: 4px 4px 10px;
+}
+
+
+/* ここから全部星のコードです。星一個の形はネットからコピペさせて頂きました。
+stylingとpositionのjsは自分で作ってみました。 */
+
+.stars {
+    position: relative;
+    z-index: 0;
+}
+
+.star {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .9em;
+    margin-right: .9em;
+    margin-bottom: 1.2em;
+    border-right: .3em solid transparent;
+    border-bottom: .7em solid gold;
+    border-left: .3em solid transparent;
+    font-size: 24px;
+}
+
+.star:before,
+.star:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: .6em;
+    left: -1em;
+    border-right: 1em solid transparent;
+    border-bottom: .7em solid gold;
+    border-left: 1em solid transparent;
+    transform: rotate(-35deg);
+}
+
+.star:after {
+    transform: rotate(35deg);
+}
+
+.q1 {
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.q2 {
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.q3 {
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.q4 {
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

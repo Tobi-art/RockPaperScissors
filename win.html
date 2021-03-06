@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/win_style.css">
+    <link rel="stylesheet" href="css/arcstyle.css">
+</head>
+
+<body>
+    <!-- まずは星たくさん作っています… -->
+    <div class="stars">
+        <div class="q1">
+            <i class='star' id='star1'></i>
+            <i class='star' id='star2'></i>
+            <i class='star' id='star3'></i>
+            <i class='star' id='star4'></i>
+            <i class='star' id='star5'></i>
+            <i class='star' id='star6'></i>
+            <i class='star' id='star7'></i>
+            <i class='star' id='star8'></i>
+            <i class='star' id='star9'></i>
+            <i class='star' id='star10'></i>
+        </div>
+        <div class="q2">
+            <i class='star' id='star11'></i>
+            <i class='star' id='star12'></i>
+            <i class='star' id='star13'></i>
+            <i class='star' id='star14'></i>
+            <i class='star' id='star15'></i>
+            <i class='star' id='star16'></i>
+            <i class='star' id='star17'></i>
+            <i class='star' id='star18'></i>
+            <i class='star' id='star19'></i>
+            <i class='star' id='star20'></i>
+        </div>
+        <div class="q3">
+            <i class='star' id='star21'></i>
+            <i class='star' id='star22'></i>
+            <i class='star' id='star23'></i>
+            <i class='star' id='star24'></i>
+            <i class='star' id='star25'></i>
+            <i class='star' id='star26'></i>
+            <i class='star' id='star27'></i>
+            <i class='star' id='star28'></i>
+            <i class='star' id='star29'></i>
+            <i class='star' id='star30'></i>
+        </div>
+        <div class="q4">
+            <i class='star' id='star31'></i>
+            <i class='star' id='star32'></i>
+            <i class='star' id='star33'></i>
+            <i class='star' id='star34'></i>
+            <i class='star' id='star35'></i>
+            <i class='star' id='star36'></i>
+            <i class='star' id='star37'></i>
+            <i class='star' id='star38'></i>
+            <i class='star' id='star39'></i>
+            <i class='star' id='star40'></i>
+        </div>
+    </div>
+    <!-- ここまで星です。 -->
+
+    <h1 id='ome'>おめでとうございます。</h1>
+    <h2 id='kachi'>あなたの勝ちです。</h2>
+    <a href="index.html">
+        <h3>もう一回</h3>
+    </a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.arctext.js"></script>
+
+    <!-- jsはとても簡単で短いのでhtmlページに直接入れています… -->
+    <script>
+        // 文字を弓形にするプラグインを使ってみました。
+        $('#ome').arctext({
+            radius: 700
+        })
+        $('#kachi').arctext({
+            radius: 500
+        });
+
+        // 星のpositionです。大体平等にページ中広げる数式をこれからもう少し研究しようと思っています。
+        // ある程度randomのほうが綺麗に見えると思い、以下の数式にしました。
+        let r1;
+        let r2;
+        let i = 1;
+        while (i < 50) {
+            r1 = (i % 10) - 20 + (Math.random() * 130);
+            $(`#star` + i).css('left', r1 + 'px');
+            $(`#star` + i).css('top', 1.8 * r1 + 'px');
+            i++;
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>GAME OVER</h1>
+    <h3 class='hide'>YOU LOSE</h3>
+    <a href="index.html">
+        <h2 class='hide1'>再チャレンジ</h2>
+    </a>
+
+    <!-- シンプルで短いページなのでCSS、JS専用のファイルを作っていません… -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- 文字が順番に表示するjsです。 -->
+    <script>
+        setTimeout(() => {
+            $('.hide').show(200)
+        }, 1500);
+        setTimeout(() => {
+            $('.hide1').fadeIn(200)
+        }, 3000);
+    </script>
+</body>
+
+<style>
+    html {
+        height: 100%;
+    }
+    
+    body {
+        width: 80%;
+        height: 100%;
+        max-width: 750px;
+        background-color: black;
+        margin: auto;
+        text-align: center;
+        font-family: "Reggae One", cursive;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    h1 {
+        font-size: 85px;
+        color: yellow;
+        font-family: 'Press Start 2P', cursive;
+        /* このanimationはネットで捜索し、このページのサイズなどに合わせただけです… */
+        animation: typing 1.5s steps(40, end);
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 100%
+        }
+    }
+    
+    h3 {
+        height: 60px;
+        font-size: 50px;
+        color: green;
+        font-family: 'Press Start 2P', cursive;
+        display: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    h2 {
+        height: 70px;
+        font-size: 60px;
+        width: 400px;
+        color: orangered;
+        border: orangered 2px solid;
+        padding: 3px;
+        margin: auto;
+        display: none;
+    }
+</style>
+
+</html>
